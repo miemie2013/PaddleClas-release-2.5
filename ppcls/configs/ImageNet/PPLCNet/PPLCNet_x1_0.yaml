@@ -17,7 +17,7 @@ Global:
 Arch:
   name: PPLCNet_x1_0
   class_num: 1000
- 
+
 # loss function config for traing/eval process
 Loss:
   Train:
@@ -72,7 +72,7 @@ DataLoader:
       use_shared_memory: True
 
   Eval:
-    dataset: 
+    dataset:
       name: ImageNetDataset
       image_root: ../ImageNet1k/Light_ILSVRC2012/
       cls_label_path: ../ImageNet1k/Light_ILSVRC2012/val_list.txt
