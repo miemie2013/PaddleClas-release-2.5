@@ -1,1 +1,0 @@
-../../docs/zh_CN/deployment/image_classification/paddle_serving.md

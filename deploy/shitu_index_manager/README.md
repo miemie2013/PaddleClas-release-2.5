@@ -1,1 +1,0 @@
-../../docs/zh_CN/deployment/PP-ShiTu/gallery_manager.md

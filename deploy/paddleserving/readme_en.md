@@ -1,1 +1,0 @@
-../../docs/en/inference_deployment/classification_serving_deploy_en.md
