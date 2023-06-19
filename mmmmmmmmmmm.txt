@@ -1,0 +1,46 @@
+
+
+新增骨干网络：docs/zh_CN/FAQ/faq_2020_s1.md
+
+### Q2.1: PaddleClas 如何训练自己的 backbone？
+**A**：具体流程如下:
+* 首先在 ppcls/arch/backbone/model_zoo/ 文件夹下新建一个自己的模型结构文件，即你自己的 backbone，模型搭建可以参考 resnet.py;
+* 然后在 ppcls/arch/backbone/\_\_init\_\_.py 中添加自己设计的 backbone 的类;
+* 其次配置训练的 yaml 文件，此处可以参考 ppcls/configs/ImageNet/ResNet/ResNet50.yaml;
+* 最后启动训练即可。
+
+
+
+
+-------------------------------------------------------------------------
+export CUDA_VISIBLE_DEVICES=0,1,2,3
+nohup python -m paddle.distributed.launch --gpus="0,1,2,3" tools/train.py -c ppcls/configs/ImageNet/PPLCNet/PPLCNet_x1_0.yaml     > xx.log 2>&1 &
+
+
+export CUDA_VISIBLE_DEVICES=0,1
+nohup python -m paddle.distributed.launch --gpus="0,1" tools/train.py -c ppcls/configs/ImageNet/PPLCNet/PPLCNet_x1_0.yaml     > xx.log 2>&1 &
+
+
+export CUDA_VISIBLE_DEVICES=2,3
+nohup python -m paddle.distributed.launch --gpus="2,3" tools/train.py -c ppcls/configs/ImageNet/PPLCNet/PPLCNet_x1_0.yaml     > xx.log 2>&1 &
+
+
+python tools/train.py -c ppcls/configs/ImageNet/PPLCNet/PPLCNet_x1_0.yaml
+
+
+
+-------------------------------------------------------------------------
+export CUDA_VISIBLE_DEVICES=0,1,2,3
+nohup python -m paddle.distributed.launch --gpus="0,1,2,3" tools/train.py -c ppcls/configs/ImageNet/CSPDarknet/CSPDarknet_small.yaml     > xx.log 2>&1 &
+
+
+
+export CUDA_VISIBLE_DEVICES=4,5,8,9
+nohup python -m paddle.distributed.launch --gpus="4,5,8,9" tools/train.py -c ppcls/configs/ImageNet/CSPDarknet/CSPDarknet_small.yaml     > xx.log 2>&1 &
+
+
+
+
+
+
+
