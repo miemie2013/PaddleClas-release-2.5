@@ -39,6 +39,8 @@ export CUDA_VISIBLE_DEVICES=4,5,8,9
 nohup python -m paddle.distributed.launch --gpus="4,5,8,9" tools/train.py -c ppcls/configs/ImageNet/CSPDarknet/CSPDarknet_small.yaml     > xx.log 2>&1 &
 
 
+转换训练好的权重给 pytorch:
+python convert_weights.py -b CSPDarknet_small -c output/CSPDarknet_small/best_model.pdparams -oc CSPDarknet_small_pretrained.pth
 
 
 
