@@ -8,7 +8,7 @@ Global:
   eval_during_train: True
   eval_interval: 1
   epochs: 360
-  print_batch_step: 10
+  print_batch_step: 100
   use_visualdl: False
   # used for static mode and model export
   image_shape: [3, 224, 224]
