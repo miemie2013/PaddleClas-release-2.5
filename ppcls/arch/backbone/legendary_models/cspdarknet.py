@@ -304,3 +304,8 @@ def CSPDarknet_small(pretrained=False, use_ssld=False, **kwargs):
     model = CSPDarknet(0.33, 0.5, depthwise=False, act="relu", focus=False, **kwargs)
     return model
 
+def CSPDarknet_hardswish_small(pretrained=False, use_ssld=False, **kwargs):
+    model = CSPDarknet(0.33, 0.5, depthwise=False, act="hardswish", focus=False, **kwargs)
+    return model
+
+

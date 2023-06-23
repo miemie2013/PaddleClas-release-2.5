@@ -25,7 +25,7 @@ from .legendary_models.pp_lcnet import PPLCNet_x0_25, PPLCNet_x0_35, PPLCNet_x0_
 from .legendary_models.pp_lcnet_v2 import PPLCNetV2_base
 from .legendary_models.esnet import ESNet_x0_25, ESNet_x0_5, ESNet_x0_75, ESNet_x1_0
 from .legendary_models.pp_hgnet import PPHGNet_tiny, PPHGNet_small, PPHGNet_base
-from .legendary_models.cspdarknet import CSPDarknet_small
+from .legendary_models.cspdarknet import CSPDarknet_small, CSPDarknet_hardswish_small
 
 from .model_zoo.resnet_vc import ResNet50_vc
 from .model_zoo.resnext import ResNeXt50_32x4d, ResNeXt50_64x4d, ResNeXt101_32x4d, ResNeXt101_64x4d, ResNeXt152_32x4d, ResNeXt152_64x4d
